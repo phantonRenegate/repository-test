@@ -1,7 +1,7 @@
-#!/usr/bin/env python3
+# Sample Python script to fetch UI patch from Google text box
 import requests
-def get_google_textbox_ui_patch():
-    url = 'https://www.google.com/'
+
+def get_ui_patch(text_box_id):
+    url = f'https://www.google.com/search?q={text_box_id}'
     response = requests.get(url)
-    # Add your logic to extract the UI patch from the response here
     return response.text
